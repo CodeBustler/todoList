@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+	padding: 10px;
+	font-family: "Montserrat", sans-serif;
+	background-color: #ff3cac;
+	background-image: linear-gradient(
+		225deg,
+		#ff3cac 0%,
+		#784ba0 50%,
+		#2b86c5 100%
+	);
+}
+
+/*APP CONTAINER*/
+.todo-app {
+	width: 100%;
+	max-width: 600px;
+	margin: 30px auto;
+	border: 1px solid lightgray;
+	border-radius: 10px;
+	padding: 30px;
+	background: white;
+}
+
+.cb {
+	display: none;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	body {
+		padding: 0;
+	}
+	.todo-app {
+		width: 100%;
+		height: 100vh;
+		margin: 0;
+		border: 1px solid lightgray;
+		border-radius: 0;
+		padding: 30px;
+		background: white;
+	}
+
+	.task-list li {
+		font-size: 15px;
+	}
+
+	.cb {
+		display: block;
+		position: absolute;
+		bottom: 20px;
+		right: 50px;
+		text-align: right;
+		color: grey;
+	}
+}
+
+/*TITLE*/
+h1 {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	font-size: 28px;
+}
+
+h1 img {
+	width: 35px;
+}
+
+/*SEARCH BAR*/
+.search {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-left: 20px;
+	background-color: #e4e4e4;
+	margin: 25px 0;
+	border-radius: 0 30px 30px 0;
+	position: relative;
+}
+
+.search input {
+	flex: 1;
+	outline: 1px solid red;
+	padding: 13px;
+	outline: none;
+	border: none;
+	background: transparent;
+	font-size: 20px;
+}
+
+.search button {
+	position: absolute;
+	right: 0px;
+	outline: none;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.search button img {
+	width: 50px;
+}
+
+.task-list li {
+	list-style: none;
+	border: 1px solid lightgrey;
+	margin: 15px 0;
+	padding: 12px 0;
+	padding-left: 45px;
+	border-radius: 5px;
+	font-size: 18px;
+	user-select: none;
+	position: relative;
+	cursor: pointer;
+}
+
+.task-list li img {
+	width: 25px;
+	position: absolute;
+	top: 12px;
+}
+
+.trash-icon {
+	right: 20px;
+}
+
+.edit-icon {
+	right: 55px;
+	opacity: 0.8;
+}
+
+.task-list li::before {
+	content: "";
+	position: absolute;
+	height: 25px;
+	width: 25px;
+	background-image: url(img/radio.png);
+	background-size: cover;
+	background-position: center;
+	border-radius: 50%;
+	left: 10px;
+	top: 12px;
+	opacity: 0.5;
+}
+
+.task-list li.checked {
+	text-decoration: line-through;
+	font-style: italic;
+	color: grey;
+}
+
+.task-list li.checked::before {
+	background-image: url(img/check.png);
+	opacity: 1;
+}

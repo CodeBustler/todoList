@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Todo List | 59/100 Projects By CodeBustler</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" href="./img/done.png" />
+		<link rel="stylesheet" type="text/css" href="./style.css" />
+		<script defer src="./script.js"></script>
+	</head>
+	<body>
+		<div class="todo-app">
+			<h1>To-do List <img src="./img/done.png" /></h1>
+			<!-- SEARCH -->
+			<div class="search">
+				<input
+					type="text"
+					placeholder="Add your task"
+					class="inputTask"
+					autofocus
+				/>
+				<button onclick="addTask()">
+					<img src="./img/plus.png" alt="" />
+				</button>
+			</div>
+			<!-- TASK LIST -->
+			<ul class="task-list"></ul>
+			<p class="cb">By CodeBustler</p>
+		</div>
+	</body>
+</html>
